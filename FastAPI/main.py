@@ -12,3 +12,10 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return{"message": "Hello fastAPI"}
+
+#Inicia el server: uvicorn main:app --reload
+#Deter el server: CTRL+C
+
+@app.get("/url")
+async def url():
+    return {"url": "https://mouredev.com/python"}
